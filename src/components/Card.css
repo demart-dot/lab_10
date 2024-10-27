@@ -1,8 +1,7 @@
-/* Card.css */
 .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    padding: 1rem;
+    background-color: #4b4b4b; /* Темный цвет фона, как в HTML-файле */
+    border-radius: 12px; /* Радиус скругления, как в примере */
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); /* Тень, аналогичная HTML */
+    padding: 0.5rem; /* Отступы, аналогичные примеру */
     margin: 1rem 0;
 }

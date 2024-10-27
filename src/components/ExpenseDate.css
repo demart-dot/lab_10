@@ -1,12 +1,26 @@
-/* ExpenseDate.css */
 .expense-date {
     display: flex;
     flex-direction: column;
+    width: 5.5rem; /* Ширина, как в HTML */
+    height: 5.5rem; /* Высота, как в HTML */
+    border: 1px solid #ececec; /* Цвет рамки */
+    background-color: #2a2a2a; /* Темный фон */
+    color: white; /* Белый текст */
+    border-radius: 12px; /* Скругленные углы */
     align-items: center;
-    color: #3a3a3a;
+    justify-content: center; /* Центрирование содержимого */
 }
-.expense-date__month,
-.expense-date__day,
+
+.expense-date__month {
+    font-size: 0.75rem; /* Размер текста */
+    font-weight: bold; /* Полужирный шрифт */
+}
+
 .expense-date__year {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
+}
+
+.expense-date__day {
+    font-size: 1.5rem;
+    font-weight: bold;
 }

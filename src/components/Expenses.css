@@ -1,7 +1,8 @@
-/* Expenses.css */
 .expenses {
-    margin: 2rem auto;
     padding: 1rem;
-    max-width: 40rem;
-    background-color: #f8f8f8;
+    background-color: rgba(117, 118, 118, 0.46); /* Полупрозрачный фон */
+    margin: 2rem auto;
+    width: 50rem; /* Ширина контейнера */
+    max-width: 95%; /* Адаптивная ширина для меньших экранов */
+    border-radius: 12px;
 }
