@@ -1,0 +1,58 @@
+.new-expense__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.new-expense__control {
+    flex: 1;
+    min-width: 10rem;
+}
+
+.new-expense__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+}
+
+.new-expense__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.new-expense__actions {
+    text-align: right;
+}
+
+.new-expense__actions button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #40005d;
+    background-color: #40005d;
+    color: white;
+    border-radius: 12px;
+    margin: 0.5rem;
+}
+
+.new-expense__actions button:hover,
+.new-expense__actions button:active {
+    background-color: #510674;
+    border-color: #510674;
+}
+
+.new-expense__actions button[type='button'] {
+    background-color: #ccc;
+    color: black;
+}
+
+.new-expense__actions button[type='button']:hover,
+.new-expense__actions button[type='button']:active {
+    background-color: #bbb;
+    border-color: #bbb;
+}
