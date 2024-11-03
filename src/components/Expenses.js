@@ -6,15 +6,15 @@ import ExpensesFilter from './ExpensesFilter';
 import ExpensesChart from './ExpensesChart';
 
 function Expenses(props) {
-    // Состояние для выбранного года
+    // Стан для вибраного року
     const [filteredYear, setFilteredYear] = useState('2024');
 
-    // Обработчик изменения фильтра
+    // Обробник зміни фільтра
     const filterChangeHandler = (selectedYear) => {
         setFilteredYear(selectedYear);
     };
 
-    // Фильтруем расходы по выбранному году
+    // Фільтруємо витрати за вибраним роком
     const filteredExpenses = props.items.filter((expense) => {
         return expense.date.getFullYear().toString() === filteredYear;
     });
@@ -22,21 +22,26 @@ function Expenses(props) {
     return (
         <div>
             <Card className="expenses">
-                {/* Фильтр по году */}
+                {/* Фільтр по року */}
                 <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-                {/* Гистограмма расходов */}
+                {/* Гістограма витрат */}
                 <ExpensesChart expenses={filteredExpenses} />
-                {/* Отображение списка расходов */}
+                {/* Відображення списку витрат */}
                 {filteredExpenses.length === 0 ? (
-                    <p>Нет расходов за выбранный год.</p>
+                    <p>Немає витрат за обраний рік.</p>
                 ) : (
                     filteredExpenses.map((expense) => (
-                        <ExpenseItem
-                            key={expense.id}
-                            title={expense.title}
-                            amount={expense.amount}
-                            date={expense.date}
-                        />
+                        <div key={expense.id} className="expense-item">
+                            <ExpenseItem
+                                title={expense.title}
+                                amount={expense.amount}
+                                date={expense.date}
+                            />
+                            {/* Кнопка редагування витрати */}
+                            <button onClick={() => props.onUpdateExpense(expense)}>Редагувати</button>
+                            {/* Кнопка видалення витрати */}
+                            <button onClick={() => props.onDeleteExpense(expense.id)}>Видалити</button>
+                        </div>
                     ))
                 )}
             </Card>
